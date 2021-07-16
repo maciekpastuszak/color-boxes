@@ -3,8 +3,12 @@ import './Box.css'
 
 export default class Box extends Component {
     constructor (props) {
+        let red = Math.floor(Math.random() * 255);
+        let green = Math.floor(Math.random() * 255);
+        let blue = Math.floor(Math.random() * 255);
+        let boxColor = `rgb(${red}, ${green}, ${blue})`;
         super (props);
-        this.state = {color: 'blue'};
+        this.state = {backgroundColor: boxColor};
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick() {
@@ -12,7 +16,7 @@ export default class Box extends Component {
     }
     render() {
         return (
-                <div className="Box" style={{backgroundColor: this.state.color}} onClick={this.handleClick}></div>
+                <div className="Box" style={{backgroundColor: this.state.backgroundColor}} onClick={this.handleClick}></div>
         )
     }
 }
