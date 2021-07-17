@@ -2,3 +2,9 @@
     width: 200px;
     height: 200px;
 }
+
+.App {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
